@@ -738,35 +738,30 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-/* COI slide button container */
 .coi-links {
     display: flex;
+    gap: 20px;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 20px;
 }
 
-/*
- * COIボタンのスタイル
- * Anchorと画像をボタンとして見せるため、ボーダーをbtn-secondaryに任せ、
- * オーバーフローを隠して丸めています。
- */
 .coi-btn {
     display: inline-block;
-    /* paddingは特に不要。btn-secondaryのスタイルに従う */
-    border-radius: 6px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
     overflow: hidden;
+    transition: 0.2s;
+    background: #fff;
     padding: 0;
 }
 
-.coi-btn img {
-    width: 200px;
-    height: auto;
-    border-radius: 4px;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.2s;
+.coi-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.coi-btn img:hover {
-    transform: scale(1.03);
+.coi-thumb {
+    width: 250px;
+    height: auto;
+    display: block;
 }
