@@ -680,12 +680,13 @@ footer {
 }
 
 /* Nav Active State */
+/* Override active nav link styling to match other items */
 .nav-menu a.active {
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .nav-menu a.active::after {
-    width: 100%;
+    width: 0;
 }
 
 /* Highlight styles for navigation links to emphasise registration and abstract pages */
