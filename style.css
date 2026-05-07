@@ -746,9 +746,16 @@ footer {
     margin-bottom: 1rem;
 }
 
+/*
+ * COIボタンのスタイル
+ * Anchorと画像をボタンとして見せるため、ボーダーをbtn-secondaryに任せ、
+ * オーバーフローを隠して丸めています。
+ */
 .coi-btn {
     display: inline-block;
-    border: none;
+    /* paddingは特に不要。btn-secondaryのスタイルに従う */
+    border-radius: 6px;
+    overflow: hidden;
     padding: 0;
 }
 
