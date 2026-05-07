@@ -70,8 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Leaflet map if the element exists
     const mapEl = document.getElementById('map');
     if (mapEl && typeof L !== 'undefined') {
-        const lat = 35.635833972602166;
-        const lng = 139.60956837637845;
+        // 正確な緯度経度に更新（東京都世田谷区大蔵2-10-1 国立成育医療研究センター）
+        const lat = 35.632698;
+        const lng = 139.611454;
         const map = L.map(mapEl).setView([lat, lng], 16);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
