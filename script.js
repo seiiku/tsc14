@@ -66,4 +66,18 @@ document.addEventListener('DOMContentLoaded', () => {
         section.classList.add('fade-up-init');
         observer.observe(section);
     });
+
+    // Initialize Leaflet map if the element exists
+    const mapEl = document.getElementById('map');
+    if (mapEl && typeof L !== 'undefined') {
+        const lat = 35.635833972602166;
+        const lng = 139.60956837637845;
+        const map = L.map(mapEl).setView([lat, lng], 16);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+        L.marker([lat, lng]).addTo(map)
+            .bindPopup('国立成育医療研究センター')
+            .openPopup();
+    }
 });
