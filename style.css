@@ -747,11 +747,12 @@ footer {
 
 .coi-btn {
     display: inline-block;
-    border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
     transition: 0.2s;
-    background: #fff;
+    background: transparent;
+    border: none;
+    box-shadow: none;
     padding: 0;
 }
 
