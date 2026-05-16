@@ -330,11 +330,11 @@ h6 {
 /* Tagline displayed below the hero title */
 .hero-tagline {
     /* Increase font size and align items horizontally */
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     color: var(--secondary-color);
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -343,14 +343,17 @@ h6 {
 /* Announcement text for concurrent events */
 .announcement {
     /* Make announcement more prominent with larger text and white background */
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     color: var(--secondary-color);
     margin-bottom: 2rem;
     text-align: center;
     background-color: #ffffff;
     display: inline-block;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
+    padding: 0.7rem 1.4rem;
+    border-radius: 12px;
+
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 /* Subtitle below the main hero heading */
