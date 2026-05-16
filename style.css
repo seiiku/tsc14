@@ -329,19 +329,58 @@ h6 {
 
 /* Tagline displayed below the hero title */
 .hero-tagline {
-    font-size: 1rem;
+    /* Increase font size and align items horizontally */
+    font-size: 1.2rem;
     color: var(--secondary-color);
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
     font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 /* Announcement text for concurrent events */
 .announcement {
-    font-size: 1rem;
+    /* Make announcement more prominent with larger text and white background */
+    font-size: 1.2rem;
     color: var(--secondary-color);
     margin-bottom: 2rem;
     text-align: center;
+    background-color: #ffffff;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+/* Subtitle below the main hero heading */
+.hero-subheading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Logo in the hero tagline */
+.tagline-logo {
+    height: 1.5em;
+    width: auto;
+}
+
+/* Additional note styling for registration page */
+.additional-note {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+/* Designated info styling for abstract page */
+.designated-info {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
 }
 
 /* Map container styling for Leaflet */
