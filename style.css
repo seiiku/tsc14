@@ -837,3 +837,76 @@ footer {
     height: auto;
     display: block;
 }
+
+@media (max-width: 768px) {
+    #hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 120px 1rem 60px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.35;
+    }
+
+    .hero-subtitle {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .hero-subheading {
+        font-size: 1.1rem;
+    }
+
+    .hero-tagline {
+        font-size: 1.05rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        line-height: 1.5;
+    }
+
+    .tagline-logo {
+        height: 1.3em;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 0.8rem 1.5rem;
+        text-align: center;
+    }
+
+    .announcement {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .content-block,
+    .abstract-section,
+    .greeting-content {
+        padding: 1.5rem;
+    }
+
+    .header-logo {
+        height: 42px;
+    }
+
+    .logo a {
+        font-size: 0.9rem;
+    }
+}
