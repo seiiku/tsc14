@@ -813,15 +813,6 @@ footer {
     color: var(--white);
 }
 
-.access-map-image {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-    overflow: visible;
-}
-
 @media (max-width: 768px) {
     .period-item {
         flex-direction: column;
