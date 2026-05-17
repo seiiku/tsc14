@@ -393,6 +393,22 @@ h6 {
     border: 0;
 }
 
+.access-info-box {
+    background: #ffffff;
+    max-width: 1000px;
+    margin: 0 auto 32px;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.access-address {
+    text-align: left;
+    line-height: 2;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
 /* Styles for COI sample images */
 .coi-images {
     display: flex;
