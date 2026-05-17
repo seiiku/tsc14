@@ -838,6 +838,12 @@ footer {
     display: block;
 }
 
+.access-map-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 @media (max-width: 768px) {
     #hero {
         height: auto;
