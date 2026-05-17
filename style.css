@@ -515,12 +515,12 @@ footer {
 }
 
 .news-section {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 28px 24px;
-  margin: 40px auto;
-  border-radius: 16px;
-  max-width: 900px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 
 .news-section h2 {
