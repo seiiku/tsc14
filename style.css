@@ -342,18 +342,28 @@ h6 {
 
 /* Announcement text for concurrent events */
 .announcement {
-    /* Make announcement more prominent with larger text and white background */
-    font-size: 1.35rem;
-    color: var(--secondary-color);
-    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
     text-align: center;
-    background-color: #ffffff;
-    display: inline-block;
-    padding: 0.7rem 1.4rem;
-    border-radius: 12px;
+    margin: 2rem auto;
+    padding-bottom: 0.8rem;
+    position: relative;
 
-    font-weight: 700;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.announcement::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--secondary-color);
 }
 
 /* Subtitle below the main hero heading */
