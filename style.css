@@ -863,6 +863,57 @@ footer {
     border-radius: 8px;
 }
 
+.registration-heading {
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.registration-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.registration-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.registration-option h3 {
+    margin: 0 0 1.5rem;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.registration-option h3 span {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.registration-btn {
+    width: 100%;
+    max-width: 360px;
+    margin-top: auto;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+}
+
+.payment-note {
+    margin: 1.25rem 0 0;
+    color: var(--secondary-color);
+    font-weight: 600;
+    line-height: 1.8;
+}
+
 .btn-lg {
     padding: 1.2rem 3rem;
     font-size: 1.1rem;
@@ -947,6 +998,22 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .action-area {
+        padding: 2rem 1rem;
+    }
+
+    .registration-options {
+        grid-template-columns: 1fr;
+    }
+
+    .registration-option {
+        padding: 1.5rem 1rem;
+    }
+
+    .registration-btn {
+        font-size: 1rem;
+    }
+
     .period-item {
         flex-direction: column;
         align-items: flex-start;
