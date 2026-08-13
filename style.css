@@ -82,10 +82,10 @@ h6 {
 /* Conference and partner logos */
 .brand-logos { display: flex; align-items: center; gap: 1rem; flex-shrink: 0; }
 .jstsc-brand { display: inline-flex; align-items: center; }
-.jstsc-header-logo { display: block; height: 64px; width: auto; }
+.jstsc-header-logo { display: block; height: 38px; width: auto; }
 .partner-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 0.15rem; padding-left: 1rem; border-left: 1px solid rgba(13, 37, 63, 0.2); }
 .partner-brand span { color: var(--text-light); font-size: 0.68rem; font-weight: 700; line-height: 1; letter-spacing: 0.12em; }
-.ts-header-logo { display: block; height: 24px; width: auto; }
+.ts-header-logo { display: block; height: 18px; width: auto; }
 
 /* Background PDF container that sits behind all content */
 .background-pdf {
@@ -1138,10 +1138,10 @@ footer {
     }
 
     .brand-logos { gap: 0.55rem; }
-    .jstsc-header-logo { height: 48px; }
+    .jstsc-header-logo { height: 32px !important; }
     .partner-brand { gap: 0.1rem; padding-left: 0.55rem; }
     .partner-brand span { font-size: 0.55rem; }
-    .ts-header-logo { height: 18px; }
+    .ts-header-logo { height: 14px !important; }
     .hero-jstsc-logo { width: min(300px, 82vw); }
     .hero-partner { flex-direction: column; gap: 0.4rem; border-radius: 12px; font-size: 0.9rem; }
     .hero-ts-logo { height: 22px; }
