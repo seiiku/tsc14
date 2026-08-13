@@ -79,13 +79,13 @@ h6 {
     padding: 1rem 0;
 }
 
-/* Header logo image styles */
-.header-logo {
-    /* Display the converted logo image at an appropriate size */
-    height: 60px;
-    width: auto;
-    margin-left: 1rem;
-}
+/* Conference and partner logos */
+.brand-logos { display: flex; align-items: center; gap: 1rem; flex-shrink: 0; }
+.jstsc-brand { display: inline-flex; align-items: center; }
+.jstsc-header-logo { display: block; height: 64px; width: auto; }
+.partner-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 0.15rem; padding-left: 1rem; border-left: 1px solid rgba(13, 37, 63, 0.2); }
+.partner-brand span { color: var(--text-light); font-size: 0.68rem; font-weight: 700; line-height: 1; letter-spacing: 0.12em; }
+.ts-header-logo { display: block; height: 24px; width: auto; }
 
 /* Background PDF container that sits behind all content */
 .background-pdf {
@@ -115,22 +115,14 @@ h6 {
     align-items: center;
 }
 
-.logo a {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
 .nav-menu ul {
     display: flex;
-    gap: 1.2rem;
+    gap: 0.9rem;
 }
 
 .nav-menu a {
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     color: var(--text-color);
     position: relative;
 }
@@ -565,6 +557,11 @@ footer {
     padding: 10px 0;
 }
 
+.hero-brand { margin: 0 auto 1rem; }
+.hero-jstsc-logo { display: block; width: min(400px, 62vw); height: auto; margin: 0 auto; filter: drop-shadow(0 10px 18px rgba(13, 37, 63, 0.12)); }
+.hero-partner { display: inline-flex; align-items: center; justify-content: center; gap: 0.8rem; margin: 0 auto 1.5rem; padding: 0.6rem 1rem; color: var(--primary-color); background: rgba(255, 255, 255, 0.78); border: 1px solid rgba(13, 37, 63, 0.12); border-radius: 999px; font-size: 0.95rem; font-weight: 700; }
+.hero-ts-logo { display: block; height: 24px; width: auto; }
+
 .news-item:first-child {
     padding-top: 0;
 }
@@ -914,6 +911,10 @@ footer {
     line-height: 1.8;
 }
 
+.postal-registration-note { width: 100%; max-width: 440px; margin: 0 0 1.5rem; padding: 1rem 1.1rem; color: #7a241c; background: #fff4f1; border: 1px solid #e7a79f; border-radius: 8px; text-align: left; }
+.postal-registration-note p { margin: 0.45rem 0 0; font-size: 0.95rem; font-weight: 700; line-height: 1.7; }
+.important-label { display: inline-block; padding: 0.15rem 0.55rem; color: var(--white); background: #b83a2d; border-radius: 999px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; }
+
 .btn-lg {
     padding: 1.2rem 3rem;
     font-size: 1.1rem;
@@ -974,12 +975,8 @@ footer {
     text-align: center;
 }
 
-.program-pdf {
-    display: block;
-    width: 100%;
-    height: 800px;
-    border: 0;
-}
+.program-content { max-width: 760px; margin: 0 auto; }
+.program-message { padding: 3rem 1.5rem; color: var(--primary-color); background: var(--surface-color); border: 1px solid rgba(13, 37, 63, 0.1); border-radius: 16px; box-shadow: var(--shadow-sm); text-align: center; font-family: 'Noto Serif JP', var(--font-heading); font-size: 1.35rem; font-weight: 700; }
 
 /* Highlight styles for navigation links to emphasise registration and abstract pages */
 .nav-menu a.nav-highlight {
@@ -1140,13 +1137,14 @@ footer {
         padding: 1.5rem;
     }
 
-    .header-logo {
-        height: 42px;
-    }
-
-    .logo a {
-        font-size: 0.9rem;
-    }
+    .brand-logos { gap: 0.55rem; }
+    .jstsc-header-logo { height: 48px; }
+    .partner-brand { gap: 0.1rem; padding-left: 0.55rem; }
+    .partner-brand span { font-size: 0.55rem; }
+    .ts-header-logo { height: 18px; }
+    .hero-jstsc-logo { width: min(300px, 82vw); }
+    .hero-partner { flex-direction: column; gap: 0.4rem; border-radius: 12px; font-size: 0.9rem; }
+    .hero-ts-logo { height: 22px; }
 
     .family-pdf-wrap {
         padding: 0.5rem;
