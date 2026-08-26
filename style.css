@@ -793,6 +793,70 @@ footer {
     font-size: 1.1rem;
 }
 
+.deadline-note {
+    margin: 1rem 0 0;
+    padding: 1rem 1.1rem;
+    color: #7a241c;
+    background: #fff4f1;
+    border: 1px solid #e7a79f;
+    border-radius: 8px;
+    line-height: 1.8;
+}
+
+.guidance-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.guidance-card {
+    padding: 1.75rem;
+    background: var(--white);
+    border: 1px solid rgba(13, 37, 63, 0.12);
+    border-top: 4px solid var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.guidance-card h3 {
+    margin: 0 0 1rem;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.guidance-list {
+    margin: 0;
+    padding-left: 1.4rem;
+}
+
+.guidance-list li {
+    margin-bottom: 0.8rem;
+    line-height: 1.8;
+}
+
+.guidance-list li:last-child {
+    margin-bottom: 0;
+}
+
+.document-delivery-note {
+    margin-top: 1.5rem;
+    padding: 1.35rem 1.5rem;
+    color: var(--primary-color);
+    background: rgba(201, 162, 39, 0.08);
+    border: 1px solid rgba(201, 162, 39, 0.55);
+    border-radius: 8px;
+}
+
+.document-delivery-note h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+.document-delivery-note p {
+    margin: 0;
+    line-height: 1.8;
+}
+
 .period-box.highlight {
     background: rgba(201, 162, 39, 0.05);
     border: 1px solid var(--secondary-color);
@@ -977,6 +1041,7 @@ footer {
 
 .program-content { max-width: 760px; margin: 0 auto; }
 .program-message { padding: 3rem 1.5rem; color: var(--primary-color); background: var(--surface-color); border: 1px solid rgba(13, 37, 63, 0.1); border-radius: 16px; box-shadow: var(--shadow-sm); text-align: center; font-family: 'Noto Serif JP', var(--font-heading); font-size: 1.35rem; font-weight: 700; }
+.program-message span { display: block; margin-top: 0.75rem; color: var(--text-light); font-family: var(--font-main); font-size: 1rem; font-weight: 500; }
 
 /* Highlight styles for navigation links to emphasise registration and abstract pages */
 .nav-menu a.nav-highlight {
@@ -1001,6 +1066,14 @@ footer {
 
     .registration-options {
         grid-template-columns: 1fr;
+    }
+
+    .guidance-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .guidance-card {
+        padding: 1.5rem 1.25rem;
     }
 
     .registration-option {
