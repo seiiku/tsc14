@@ -12,12 +12,21 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="menu.css">
     <script src="script.js" defer></script>
+<script>
+        // Keep existing bookmarks working after moving these sections to pages.
+        function openLegacyPage() {
+            const pages = { '#greeting': 'greeting.html', '#outline': 'outline.html', '#access': 'access.html' };
+            const destination = pages[window.location.hash];
+            if (destination) window.location.replace(destination);
+        }
+        openLegacyPage();
+        window.addEventListener('hashchange', openLegacyPage);
+    </script>
 </head>
 
-<body>
+<body class="menu-layout home-page">
     <header id="header" class="glass">
         <div class="container header-container">
             <div class="brand-logos" style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
@@ -29,18 +38,7 @@
                     <img src="ts_logo.png" alt="TSつばさの会" class="ts-header-logo" style="display:block;height:18px;width:auto;">
                 </div>
             </div>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="index.html">ホーム</a></li>
-                    <li><a href="index.html#greeting">会長挨拶</a></li>
-                    <li><a href="index.html#outline">開催概要</a></li>
-                    <li><a href="index.html#access">アクセス</a></li>
-                    <li><a href="registration.html">参加登録</a></li>
-                    <li><a href="abstract.html">演題募集</a></li>
-                    <li><a href="program.html">プログラム</a></li>
-                    <li><a href="family.html">ファミリーネット企画</a></li>
-                </ul>
-            </nav>
+            <nav class="nav-menu" aria-label="メインメニュー"><ul><li><a href="index.html" class="active" aria-current="page">ホーム</a></li><li><a href="greeting.html">会長挨拶</a></li><li><a href="outline.html">開催概要</a></li><li><a href="access.html">アクセス</a></li><li><a href="registration.html">参加登録</a></li><li><a href="abstract.html">演題募集</a></li><li><a href="program.html">プログラム</a></li><li><a href="family.html">ファミリーネット企画</a></li></ul></nav>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -67,19 +65,8 @@
                         <span class="value">国立成育医療研究センター 講堂 <br><span class="online-tag">＋ オンライン併用</span></span>
                     </div>
                 </div>
-                <div class="hero-actions fade-in">
-                    <a href="#outline" class="btn btn-primary">開催概要を見る</a>
-                    <a href="registration.html" class="btn btn-primary">参加登録</a>
-                    <a href="abstract.html" class="btn btn-primary">演題募集</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="news" class="section">
-            <div class="news-section">
-                <h2>お知らせ</h2>
-
-                <div class="news-list">
+                <nav class="hero-actions home-menu" aria-label="各ページへのメニュー"><a href="index.html" class="home-menu-button" aria-current="page"><span>ホーム</span><span class="menu-arrow" aria-hidden="true">→</span></a><a href="greeting.html" class="home-menu-button"><span>会長挨拶</span><span class="menu-arrow" aria-hidden="true">→</span></a><a href="outline.html" class="home-menu-button"><span>開催概要</span><span class="menu-arrow" aria-hidden="true">→</span></a><a href="access.html" class="home-menu-button"><span>アクセス</span><span class="menu-arrow" aria-hidden="true">→</span></a><a href="registration.html" class="home-menu-button"><span>参加登録</span><span class="menu-arrow" aria-hidden="true">→</span></a><a href="abstract.html" class="home-menu-button"><span>演題募集</span><span class="menu-arrow" aria-hidden="true">→</span></a><a href="program.html" class="home-menu-button"><span>プログラム</span><span class="menu-arrow" aria-hidden="true">→</span></a><a href="family.html" class="home-menu-button"><span>ファミリーネット企画</span><span class="menu-arrow" aria-hidden="true">→</span></a></nav>
+<details class="home-news"><summary>お知らせを見る</summary><div class="news-list">
                     <div class="news-item">
                         <span class="news-date">2026.5.17</span>
                         <span class="news-text">ホームページを開設しました。</span>
@@ -90,7 +77,7 @@
                     </div>
                     <div class="news-item">
                         <span class="news-date">2026.8.7</span>
-                        <span class="news-text">参加登録と演題募集の開始を2026年8月17日（月）に延期しました。</span>
+                        <span class="news-text">参加登録と演題募集の開始を2026年8月17日（月）に延期しました。申し訳ありません。</span>
                     </div>
                     <div class="news-item">
                         <span class="news-date">2026.8.13</span>
@@ -104,108 +91,17 @@
                         <span class="news-date">2026.8.26</span>
                         <span class="news-text">参加登録ページを更新しました。</span>
                     </div>
-                    <div class="news-item">
-                        <span class="news-date">2026.10.09</span>
-                        <span class="news-text">プログラムページにプログラムを掲載しました。</span>
-                    </div>
-                </div>
+                </div></details>
             </div>
         </section>
 
-        <section id="greeting" class="section">
-            <div class="container">
-                <h2 class="section-title">会長挨拶</h2>
-                <div class="greeting-content">
-                    <div class="greeting-text">
-                        <p>
-                            この度、第14回日本結節性硬化症学会学術総会の会長を拝命いたしました。2026年11月22日、東京都世田谷区の国立成育医療研究センター講堂を会場として、第14回学術総会を開催いたします。本学会では、医療従事者のみならず患者さんやご家族の皆様とともに、結節性硬化症の診療・研究の発展に取り組んでいます。結節性硬化症は全身の多くの臓器に腫瘍を形成し、患者さんの一生にわたって治療とサポートが必要となる遺伝性疾患です。近年は遺伝子変異に基づく薬物療法の進歩により予後が大きく改善していますが、多くの課題が残されています。
-                        </p>
-                        <p>
-                            今回の学術総会では、最新の研究成果や臨床経験を共有し、未来に向けた課題への取り組みについて議論する場として企画しました。また、患者さんとご家族を対象とした「TSCつばさの会」も同時開催いたします。ハイブリッド形式（現地開催＋オンライン併用）で実施いたしますが、ぜひ会場にお越しいただき、直接交流を深めていただければ幸いです。
-                        </p>
-                        <p class="signature">第14回日本結節性硬化症学会学術総会 会長　阿部　裕一</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
 
-        <section id="outline" class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">開催概要</h2>
-                <dl class="outline-list">
-                    <div class="outline-item">
-                        <dt>名称</dt>
-                        <dd>第14回結節性硬化症学会学術集会</dd>
-                    </div>
-                    <div class="outline-item">
-                        <dt>会期</dt>
-                        <dd>2026年11月22日（日）</dd>
-                    </div>
-                    <div class="outline-item">
-                        <dt>開催形式</dt>
-                        <dd>現地開催およびオンライン配信のハイブリッド形式<br>
-                            <span class="note">※演者の方は来場にてご発表をお願いいたします。</span>
-                        </dd>
-                    </div>
-                    <div class="outline-item">
-                        <dt>会場</dt>
-                        <dd>
-                            国立成育医療研究センター 講堂<br>
-                            〒157-8535 東京都世田谷区大蔵2-10-1
-                        </dd>
-                    </div>
-                    <div class="outline-item">
-                        <dt>事務局</dt>
-                        <dd>
-                            第14回日本結節性硬化症学会学術総会 運営事務局<br>
-                            Email: jstsc14-office@ncchd.go.jp
-                        </dd>
-                    </div>
-                </dl>
-            </div>
-        </section>
+        
 
-        <section id="access" class="section">
-            <div class="container">
-                <h2 class="section-title">アクセス</h2>
-                <div class="access-content">
-                    <div class="access-info-box">
-                        <p class="access-address">
-                            〒157-8535 東京都世田谷区大蔵2-10-1 国立成育医療研究センター　講堂（運営棟 1 階）<br><br>
+        
 
-                            〇バス <br>
-                            1. 小田急小田原線　成城学園前駅で下車（快速急行は止まりませんのでご注意ください） <br>
-                            南口バス停（モスバーガーを右に曲がってすぐ）からバスで約10分（渋谷24系統渋谷行き）　成育医療研究センター前で下車 <br>
-
-                            2．東急田園都市線 用賀駅 <br>
-                            •東急田園都市線 用賀駅より バスで約15分（成城学園前駅行き）　成育医療研究センター前で下車 <br>
-
-                            3．東急田園都市線 二子玉川駅 <br>
-                            •東急田園都市線 二子玉川駅より バスで約25分（成育医療研究センター，美術館行） 　成育医療研究センター前で下車 <br>
-
-                            4．渋谷駅 <br>
-                            •渋谷駅より バスで約40分（東急バス 成城学園前駅西口行） 　成育医療研究センター前で下車 <br>
-
-                            ※詳細につきましては，各社にお問い合わせ下さい。<br><br>
-
-                            〇タクシー <br>
-                            •小田急線 成城学園前駅北口より タクシーで5分<br><br>
-
-                            〇徒歩 <br>
-                            •小田急線 祖師ヶ谷大蔵駅より 徒歩15分<br><br>
-
-                            【注意】<br>
-                            注1．1,4以外のバスは本数が少ないためご注意ください。<br>
-                            注2．国立成育医療研究センターには患者・来客用の駐車場がございますが，学会への参加の皆様につきましては，<br>
-                            割引適応がなく600円／1時間の料金がかかりますのでご理解の程よろしくお願い申し上げます。
-                        </p>
-                    </div>
-                    <div class="map-container">
-                        <div id="map"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
     </main>
 
     <footer>
