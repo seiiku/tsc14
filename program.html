@@ -13,6 +13,33 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+
+    <style>
+        .schedule-content { max-width: 1100px; margin: 0 auto; }
+        .schedule-intro { margin-bottom: 1.5rem; }
+        .schedule-intro h2 { margin-bottom: .75rem; font-size: 1.7rem; }
+        .schedule-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
+        .schedule-scroll { overflow-x: auto; border-radius: 8px; background: #fff; box-shadow: var(--shadow-sm); }
+        .schedule-table { width: 100%; min-width: 680px; border-collapse: collapse; table-layout: fixed; }
+        .schedule-table caption { padding: 1rem; font-size: 1.2rem; font-weight: 700; color: var(--primary-color); }
+        .schedule-table th, .schedule-table td { padding: 1rem; border: 1px solid #dce2e8; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+        .schedule-table thead th { background: var(--primary-color); color: #fff; }
+        .schedule-table tbody th { font-size: .95rem; font-weight: 500; background: #f3f6f9; white-space: nowrap; }
+        .schedule-table .session-title { font-weight: 700; color: var(--primary-color); }
+        .schedule-table .session-detail { margin-top: .4rem; font-size: .92rem; }
+        .schedule-table .parallel-session { background: #fcfaf2; }
+        .schedule-table .session-gap { background: #fafafa; }
+        .schedule-table .pending { background: #fff0b3; padding: .1rem .35rem; border-radius: 3px; }
+        .schedule-note { margin: 1rem 0 2.5rem; font-weight: 700; color: var(--primary-color); }
+        .schedule-help { margin: 0 0 .75rem; color: var(--text-light); font-size: .9rem; }
+        .schedule-scroll:focus-visible { outline: 3px solid var(--secondary-color); outline-offset: 3px; }
+        @media (max-width: 768px) {
+            .page-header.section { padding-top: 7rem; }
+            .schedule-intro h2 { font-size: 1.4rem; }
+            .schedule-table th, .schedule-table td { padding: .8rem; }
+            .schedule-actions .btn { max-width: 100%; }
+        }
+    </style>
 </head>
 
 <body>
@@ -52,6 +79,41 @@
         </section>
         <section class="section">
             <div class="container">
+
+                <div class="schedule-content">
+                    <div class="schedule-intro">
+                        <h2>第14回 簡易日程表</h2>
+                        <p>開催日：2026年（令和8年）11月22日（日）</p>
+                        <div class="schedule-actions">
+                            <a class="btn btn-primary" href="assets/14TSC簡易日程表.pdf" target="_blank" rel="noopener">簡易日程表PDFを開く（別タブ）</a>
+                            <a class="btn btn-secondary" href="assets/14TSC簡易日程表.pdf" download>PDFをダウンロード</a>
+                        </div>
+                    </div>
+                    <p class="schedule-help" id="schedule-help">画面に表全体が収まらない場合は、左右にスクロールしてご覧ください。</p>
+                    <div class="schedule-scroll" role="region" aria-label="簡易日程表" aria-describedby="schedule-help" tabindex="0">
+                        <table class="schedule-table">
+                            <caption>11月22日（日）の日程</caption>
+                            <colgroup><col style="width: 155px;"><col><col style="width: 200px;"></colgroup>
+                            <thead><tr><th scope="col">時間</th><th scope="col">講堂</th><th scope="col">会議室11・12</th></tr></thead>
+                            <tbody>
+                                <tr><th scope="row">9:00〜</th><td>受付</td><td rowspan="4" class="parallel-session">TSつばさの会<br>休憩室（会議室11・12）</td></tr>
+                                <tr><th scope="row">9:50〜10:00</th><td>開会の挨拶</td></tr>
+                                <tr><th scope="row">10:00〜11:10</th><td>一般演題</td></tr>
+                                <tr><th scope="row">11:10〜12:10</th><td><p class="session-title">大会企画：これまで、そして、これから：TSつばさの会</p><p class="session-detail">平岡まゑみ</p></td></tr>
+                                <tr><th scope="row">12:10〜13:10</th><td><p class="session-title">＊「てんかん重積状態に対する病院前治療の現状と課題」</p><p class="session-detail">演者：菊池健二郎<br>共催：ヴィアトリス製薬合同会社</p></td><td class="parallel-session">患者家族交流会<br>（会議室11・12）</td></tr>
+                                <tr><th scope="row">13:10〜13:20</th><td>日本結節性硬化症学会総会</td><td class="session-gap"></td></tr>
+                                <tr><th scope="row">13:20〜14:00</th><td><p class="session-title">＊講演1：「TSC-AMLに対する凍結治療における日本結節性硬化症学会の役割」</p><p class="session-detail">演者：波多野孝史</p><p class="session-title">＊講演2：<span class="pending">「調整中」</span></p><p class="session-detail">演者：石松慶祐<br>共催：ボストン・サイエンティフィック ジャパン株式会社</p></td><td rowspan="2" class="parallel-session">患者向けTSC医療講演会<br>（会議室11・12）</td></tr>
+                                <tr><th scope="row">14:00〜14:50</th><td><p class="session-title">康本徳守記念結節性硬化症関連神経難病研究基金</p><p class="session-detail">受給者講演</p></td></tr>
+                                <tr><th scope="row">14:50〜15:00</th><td>休憩</td><td rowspan="5" class="session-gap"></td></tr>
+                                <tr><th scope="row">15:00〜16:00</th><td><p class="session-title">ファミリーネット企画：特別講演<br>「TSCてんかんのタイプと使うべきお薬」</p><p class="session-detail">演者：岡西 徹</p></td></tr>
+                                <tr><th scope="row">16:00〜16:10</th><td><p class="session-title">大会企画：これまで、そして、これから：日本結節性硬化症学会</p><p class="session-detail">波多野孝史</p></td></tr>
+                                <tr><th scope="row">16:10〜16:15</th><td>次回第15回日本結節性硬化症学会学術総会会長挨拶</td></tr>
+                                <tr><th scope="row">16:15〜</th><td>閉会の挨拶</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="schedule-note">＊：共催セミナーは医療・研究関係者のみのご聴講となります。</p>
+                </div>
                 <div class="program-content fade-in">
                     <p class="program-message">
                         プログラム・抄録集のPDFは2026年11月に公開予定です。
